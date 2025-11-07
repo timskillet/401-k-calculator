@@ -248,7 +248,7 @@ function InputPanel({
           <div className="grid grid-cols-2 gap-4 px-4 py-2">
             <PercentageInput
               id="matchRate"
-              label="Match Rate"
+              label="Employer Match Rate"
               value={matchRate}
               onChange={setMatchRate}
               min={0}

@@ -35,12 +35,12 @@ export const calculateOutput = (plan: SavingsPlan) => {
     const yearContribution =
       plan.contributionType === "percentage"
         ? (plan.annualSalary * plan.contributionAmountPercentage) / 100
-        : plan.contributionAmountFixed * 12;
+        : plan.contributionAmountFixed * 26;
 
     const yearMatchableRate =
       plan.contributionType === "percentage"
         ? plan.contributionAmountPercentage / 100
-        : (plan.contributionAmountFixed * 12) / plan.annualSalary;
+        : (plan.contributionAmountFixed * 26) / plan.annualSalary;
 
     const yearMatch = (plan.annualSalary * yearMatchableRate * plan.matchRate) / 100;
 
@@ -105,12 +105,12 @@ export const calculateProjectionData = (
           const yearContribution =
             plan.contributionType === "percentage"
               ? (currentSalary * plan.contributionAmountPercentage) / 100
-              : plan.contributionAmountFixed * 12;
+              : plan.contributionAmountFixed * 26;
   
           const yearMatchableRate =
             plan.contributionType === "percentage"
               ? plan.contributionAmountPercentage / 100
-              : (plan.contributionAmountFixed * 12) / currentSalary;
+              : (plan.contributionAmountFixed * 26) / currentSalary;
   
           const yearMatch =
             (currentSalary * yearMatchableRate * plan.matchRate) / 100;

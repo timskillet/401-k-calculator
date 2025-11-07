@@ -13,7 +13,7 @@ const mockContributions = (): Contribution[] => {
 
   for (let i = 1; i <= 26; i++) {
     const contributionDate = new Date(startDate);
-    contributionDate.setDate(startDate.getDate() - (i - 1) * 14); // Subtract 14 days for each bi-weekly period
+    contributionDate.setDate(contributionDate.getDate() - (i - 1) * 14); // Subtract 14 days for each bi-weekly period
 
     contributions.push({
       id: i.toString(),
